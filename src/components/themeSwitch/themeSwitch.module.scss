@@ -1,0 +1,28 @@
+@use "../../styles/mixins" as mix;
+
+.themeSwitch {
+  @include mix.h4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+  width: 90px;
+  border: none;
+  background-color: transparent;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  cursor: pointer;
+
+  path {
+    fill: var(--secondary-font);
+  }
+
+  &:hover {
+    color: var(--theme-switch-hover);
+
+    path {
+      fill: var(--theme-switch-hover);
+    }
+  }
+}

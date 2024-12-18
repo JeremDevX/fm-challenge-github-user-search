@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #0079ff;
+  --secondary-color: #697c9a;
+  --bg-color: #f6f8ff;
+  --card: #fefefe;
+  --error: #f74646;
+  --primary-font: #2b3442;
+  --secondary-font: #4b6a9b;
+  --theme-switch-hover: #222731;
+  --box-shadow: 0px 16px 30px -10px #4660bb33;
+  --button-font: #ffffff;
+  --button-hover: #60abff;
+
+  --layout-mobile: 425px;
+  --layout-tablet: 573px;
+  --layout-desktop: 730px;
+}
+
+.dark {
+  --primary-color: #0079ff;
+  --secondary-color: #ffffff;
+  --bg-color: #141d2f;
+  --card: #1e2a47;
+  --error: #f74646;
+  --primary-font: #ffffff;
+  --secondary-font: #ffffff;
+  --theme-switch-hover: #90a4d4;
+  --box-shadow: 0px 0px 0px 0px #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: inherit;
+  color: inherit;
+  font-family: inherit;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: var(--bg-color);
+
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+}

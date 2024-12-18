@@ -1,0 +1,11 @@
+@use "../styles/mixins" as mix;
+
+.githubSearch {
+  @include mix.width-layout;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+  width: 100%;
+}
