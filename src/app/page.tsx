@@ -8,9 +8,9 @@ import { useState } from "react";
 export default function Page() {
   const [userData, setUserData] = useState<UserCardProps["user"]>({
     avatar_url: "",
-    name: "",
-    login: "",
-    bio: "",
+    name: "Something went wrong",
+    login: "404",
+    bio: "Oops! Something went wrong. Please try again.",
     created_at: new Date(),
     public_repos: 0,
     followers: 0,

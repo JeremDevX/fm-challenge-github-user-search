@@ -67,7 +67,7 @@ export default function UserCard({ user }: UserCardProps) {
         {user.avatar_url ? (
           <Image
             src={user.avatar_url}
-            alt={user.name || user.login}
+            alt={"Avatar of " + user.login}
             width={100}
             height={100}
             className={styles.userCard__header_avatar}

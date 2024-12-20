@@ -63,7 +63,14 @@ export default function SearchBar({
   }, []);
 
   return (
-    <form className={styles.searchBar} onSubmit={handleSubmitSearch}>
+    <form
+      className={styles.searchBar}
+      onSubmit={handleSubmitSearch}
+      aria-labelledby="searchBarLabel"
+    >
+      <label id="searchBarLabel" htmlFor="username" style={{ display: "none" }}>
+        Search GitHub username
+      </label>
       <SVGIcon
         paths={icons.search.paths}
         fill={icons.search.fill}
@@ -71,19 +78,22 @@ export default function SearchBar({
         height={icons.search.height}
         className={styles.searchBar__icon}
       />
-      <label htmlFor="username" style={{ display: "none" }}>
-        Search GitHub username
-      </label>
       <input
         type="text"
         className={styles.searchBar__input}
         placeholder="Search GitHub username…"
+        title="Search GitHub username"
         onChange={handleInputChange}
         value={inputValue}
         id="username"
+        aria-describedby={error ? "errorMessage" : undefined}
         autoComplete="off"
       />
-      {error && <span className={styles.searchBar__error}>No results</span>}
+      {error && (
+        <span id="errorMessage" className={styles.searchBar__error}>
+          No results
+        </span>
+      )}
       <button
         className={styles.searchBar__button}
         type="submit"
